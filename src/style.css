@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+:root {
+  --grid: 8px;
+  --borderWidth: 4px;
+  --borderRadius: 8px;
+  --primary-color: #2a3442;
+  --secondary-color: #677e9e;
+}
+
+body {
+  font-family: "poppins", cursive;
+  user-select: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns {
+  display: flex;
+}
+
+.column {
+  margin: 10px;
+  background-color: var(--primary-color);
+}
+
+.column-title {
+  padding: 10px;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #677e9e;
+  margin-top: 0;
+}
+
+.task-list {
+  /* this has no visible impact, but is in line with the absolute position spacing.
+  doing this ensures that dropping into an empty list will be in the correct visual position */
+  padding-left: var(--grid);
+  padding-right: var(--grid);
+  scrollbar-color: dark;
+}
+
+.item {
+  background: #202832;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #cdd5ee;
+  font-size: 14px;
+  user-select: none;
+}
+
+.item.is-dragging {
+  background: #515b7d;
+}
